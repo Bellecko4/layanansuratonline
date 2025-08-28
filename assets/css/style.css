@@ -1,0 +1,165 @@
+/* File: style.css */
+/* Gaya tambahan untuk aplikasi Layanan Surat yang responsif */
+
+/* FONT GLOBAL */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.5;
+}
+
+/* TOMBOL UMUM */
+.button-primary {
+  background-color: #16a34a; /* bg-green-600 */
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.button-primary:hover {
+  background-color: #15803d; /* hover:bg-green-700 */
+  transform: scale(1.03);
+}
+
+.button-danger {
+  background-color: #dc2626; /* bg-red-600 */
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.button-danger:hover {
+  background-color: #b91c1c; /* hover:bg-red-700 */
+  transform: scale(1.03);
+}
+
+/* ALERT / NOTIFIKASI */
+.alert-success {
+  background-color: #d1fae5; /* bg-green-100 */
+  color: #065f46;            /* text-green-800 */
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.alert-error {
+  background-color: #fee2e2; /* bg-red-100 */
+  color: #991b1b;            /* text-red-700 */
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.5s ease;
+}
+
+/* FORM DARK MODE */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #1f2937; /* bg-gray-800 */
+  color: #f9fafb;
+  border-color: #4b5563;     /* border-gray-600 */
+}
+
+/* TABEL RESPONSIF */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px; /* supaya header tabel tidak hancur di layar kecil */
+}
+
+/* RESPONSIF UMUM */
+@media (max-width: 1024px) {
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+  .text-xl {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Form input dan tombol full width */
+  input, select, textarea, button {
+    width: 100% !important;
+  }
+
+  /* Stack elemen form di atas bawah */
+  .form-inline {
+    display: block;
+  }
+
+  /* Kecilkan teks tabel */
+  table td, table th {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  /* Padding container */
+  .p-6 {
+    padding: 1.25rem;
+  }
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Sembunyikan elemen tertentu di mobile */
+  .hide-on-mobile {
+    display: none;
+  }
+
+  /* Font kecil untuk header */
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+  .text-xl {
+    font-size: 1.125rem;
+  }
+
+  /* Tampilkan data seperti kartu */
+  .card-view {
+    display: block;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+  }
+
+  /* Hilangkan tabel di mobile jika pakai card */
+  .table-hide-mobile {
+    display: none;
+  }
+}
+
+/* ANIMASI */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* TRANSISI GLOBAL */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
